@@ -6,7 +6,7 @@
 
 > 🇮🇳 **Hinglish edition available:** the same book retold in Hinglish, with desi analogies, doubt-clearing boxes, English interview lines and memory tricks added to every chapter. Start at [hinglish/README.md](hinglish/README.md).
 >
-> 📖 **Read it as a website:** [Zero to Architect reader](https://claude.ai/artifact/XkCWmqf5irVUeYNz1N6qBG) (private to you). It has an English/Hinglish switch, search, progress tracking and runnable Python examples.
+> 📖 **Read it as a website on your computer:** double-click `read-book.bat` (Windows) or run `./read-book.sh` (Mac/Linux), then open **http://localhost:8000/site/**. It has an English/Hinglish switch, search, progress tracking and runnable Python examples. Needs Python installed and internet for fonts and diagrams.
 
 ---
 

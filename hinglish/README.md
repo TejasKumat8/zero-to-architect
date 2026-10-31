@@ -6,7 +6,7 @@
 
 > 🇮🇳 **Ye "Zero to Architect" ka Hinglish edition hai.** Wahi poori kitaab, wahi code, wahi chapters, lekin samjhaaya gaya hai jaise ek senior bhaiya/didi chai pe samjhaate hain: Roman script mein Hindi, aur har technical term English mein (kyunki interview English mein hi hoga). Upar se har chapter mein desi analogies, "mann mein sawaal" wale doubt-clearing boxes, interview mein bolne layak English lines, aur yaad rakhne ke jugaad bhi jode gaye hain. English edition padhna hai? Yahan jao: [English edition](../README.md).
 >
-> 📖 **Website pe padho:** [Zero to Architect reader](https://claude.ai/artifact/XkCWmqf5irVUeYNz1N6qBG) (sirf tumhare liye private). Hinglish/English switch, search, progress tracking aur browser mein Run hone wale Python examples ke saath.
+> 📖 **Apne computer pe website ki tarah padho:** `read-book.bat` pe double-click karo (Windows) ya `./read-book.sh` chalao (Mac/Linux), phir **http://localhost:8000/site/** kholo. Hinglish/English switch, search, progress tracking aur browser mein Run hone wale Python examples ke saath. Python install hona chahiye, aur fonts/diagrams ke liye internet.
 
 ---
 

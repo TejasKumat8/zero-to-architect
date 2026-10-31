@@ -948,7 +948,7 @@ Total: 1504.5
 Each pays: 376.12
 ```
 
-(`376.125` rounds to `376.12`, not `376.13`! The float stored for it is a hair below .125. Yet another reason money uses integers or `decimal` in real systems.)
+(`376.125` rounds to `376.12`, not `376.13`! Here `376.125` happens to be stored exactly in binary, so `round()` applies **round half to even** (Trap 5 below) and keeps the even digit `2`. With other values the float itself is the culprit: `round(2.675, 2)` gives `2.67` because the stored float is a hair below `2.675`. Either way, real systems use integers or `decimal` for money.)
 
 </details>
 

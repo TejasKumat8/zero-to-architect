@@ -33,7 +33,7 @@ These are the classic order-of-magnitude numbers (popularised by Jeff Dean and P
 | Packet round trip California → Netherlands → California | 150 ms | about 5 years |
 
 **What to take away:**
-- **Memory is ~100× faster than SSD random reads, and SSD is ~100× faster than a disk seek.** That's why caches exist.
+- **Memory is ~1,000× faster than SSD random reads, and SSD is ~100× faster than a disk seek.** That's why caches exist.
 - **Sequential beats random**, on every medium. That's why logs, Kafka and LSM trees append.
 - **Network inside a data centre is cheap (~0.5 ms); across continents it's expensive (~150 ms).** That's why CDNs and multi-region deployments exist.
 - **A user notices ~100 ms.** A page that makes 5 sequential cross-region calls already feels slow.
@@ -612,7 +612,7 @@ Each answer is a 5-line skeleton: **Requirements → Estimates → API & data �
 
 1. **Requirements:** update scores in real time, show top N, show my rank, daily/weekly/all-time boards.
 2. **Estimates:** e.g. 10M players, thousands of score updates per second.
-3. **Data:** **Redis sorted set** per board (`ZINCRBY` to update, `ZREVRANGE` for top N, `ZREVRANK` for my rank, each O(log n)); durable copy of scores in a DB.
+3. **Data:** **Redis sorted set** per board (`ZINCRBY` to update, `ZREVRANGE` for top N, `ZREVRANK` for my rank, each O(log n), plus N for reading the top N); durable copy of scores in a DB.
 4. **Core design:** score events → service → sorted set; periodic boards as separate keys with expiry.
 5. **Scaling:** for huge boards, shard by user and **merge per-shard top-k** for the global top N; approximate ranks (score buckets) for users far from the top.
 

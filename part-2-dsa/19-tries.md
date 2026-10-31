@@ -1221,7 +1221,7 @@ print(find_all_concatenated_words(words))
 ['catsdogcats', 'dogcatsdog', 'ratcatdogcat']
 ```
 
-O(Σ L²) in the worst case. Because only strictly shorter (already inserted) words are in the trie, a word can't "split" into just itself.
+O(Σ L²) in the worst case. A word is checked **before** it is inserted, so the trie holds only shorter words and other words of the same length; since the words are distinct, no single trie word can cover the whole of `w`, so a word can't "split" into just itself.
 
 </details>
 

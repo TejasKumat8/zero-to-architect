@@ -376,7 +376,7 @@ while h:
 2 code review
 ```
 
-What just happened: the two priority-2 tasks were compared by the counter (1 vs 2), never by the `Task` objects. As a bonus, ties come out in **insertion order** (first in, first out), which is usually what you want.
+What just happened: the two priority-2 tasks were compared by the counter (0 vs 2), never by the `Task` objects. As a bonus, ties come out in **insertion order** (first in, first out), which is usually what you want.
 
 ### 9. The max-heap trick: negate
 
@@ -1111,7 +1111,7 @@ Each row and column is sorted ascending. Find the k-th smallest.
 
 <details><summary>Answer</summary>
 
-K-way merge over the rows: start with the first element of each row (up to k rows), pop k times, each time pushing the next element in the popped row.
+K-way merge over the rows: start with the first element of each row (up to k rows), pop k − 1 times, each time pushing the next element in the popped row. The top is then the k-th smallest.
 
 ```python
 import heapq

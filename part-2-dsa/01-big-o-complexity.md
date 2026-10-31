@@ -689,7 +689,7 @@ Python hides loops inside innocent-looking one-liners. `x in my_list` is a loop.
 | `d[k]`, `d[k] = v`, `k in d`, `del d[k]` | O(1) | O(n) |
 | `s.add(x)`, `x in s`, `s.remove(x)` | O(1) | O(n) |
 | iterate over all items | O(n) | O(n) |
-| `s | t` (union) | O(len(s) + len(t)) | |
+| `s \| t` (union) | O(len(s) + len(t)) | |
 | `s & t` (intersection) | O(min(len(s), len(t))) | |
 | `d.copy()`, `set(iterable)` | O(n) | |
 

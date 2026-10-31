@@ -567,7 +567,7 @@ print(fib.cache_info())
 CacheInfo(hits=78, misses=81, maxsize=None, currsize=81)
 ```
 
-What just happened: 81 distinct sub-problems (`fib(0)` to `fib(80)`) were each computed once ("misses"), and 78 repeated requests were answered instantly from the cache ("hits"). From ~10¹⁶ calls down to 159. Time went from O(2ⁿ) to **O(n)**.
+What just happened: 81 distinct sub-problems (`fib(0)` to `fib(80)`) were each computed once ("misses"), and 78 repeated requests were answered instantly from the cache ("hits"). From about 7.6 × 10¹⁶ calls down to 159. Time went from O(2ⁿ) to **O(n)**.
 
 ```mermaid
 flowchart LR

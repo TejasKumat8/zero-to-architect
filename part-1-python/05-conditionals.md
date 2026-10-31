@@ -760,7 +760,7 @@ if colour in ("red", "blue"):       # ✅
 
 6. **`if not x` when 0 is valid.** Use `if x is None`.
 
-7. **Comparing with `== True`.** `if flag == True:` fails for truthy non-bool values like `1` or `"yes"` in ways you didn't intend, and it's just noise. Write `if flag:`.
+7. **Comparing with `== True`.** `if flag == True:` fails for truthy non-bool values like `2` or `"yes"` in ways you didn't intend (`1 == True` is `True`, but `2 == True` and `"yes" == True` are both `False`), and it's just noise. Write `if flag:`.
 
 8. **Comparing floats with `==` in conditions.** `if 0.1 + 0.2 == 0.3:` is `False`. Use `abs(a - b) < 1e-9`.
 

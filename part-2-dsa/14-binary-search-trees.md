@@ -735,7 +735,7 @@ Someone swapped the values of two nodes by mistake. Fix the tree without changin
 
 **Idea:** the inorder sequence of a correct BST is sorted. Swapping two values creates "descents" (a value smaller than the one before it):
 
-- Swapped values **not adjacent** in inorder: `1 3 [7] 6 4 [8]`... let's take sorted `1 3 4 6 7 8` and swap 3 and 7: `1 7 4 6 3 8`. Descents: `7 > 4` and `6 > 3`. The wrong values are the **first element of the first descent** (7) and the **second element of the last descent** (3).
+- Swapped values **not adjacent** in inorder: take sorted `1 3 4 6 7 8` and swap 3 and 7: `1 7 4 6 3 8`. Descents: `7 > 4` and `6 > 3`. The wrong values are the **first element of the first descent** (7) and the **second element of the last descent** (3).
 - Swapped values **adjacent**: `1 3 6 4 7 8` has one descent `6 > 4`. Both come from that one descent.
 
 The same rule ("first = first descent's left, second = latest descent's right") handles both cases.
@@ -1289,7 +1289,7 @@ def valid(node, low=-inf, high=inf):
     return valid(node.left, low, node.val) and valid(node.right, node.val, high)
 ```
 
-2. **Using `0` or `float('-inf')` carelessly as the initial "prev".** If you validate with "prev value", start with `None` (or `-math.inf`), not `0`. Trees can contain negative numbers, and `0` would wrongly reject them.
+2. **Using `0` as the initial "prev".** If you validate with "prev value", start with `None` (or `-math.inf`), not `0`. Trees can contain negative numbers, and `0` would wrongly reject them.
 3. **Forgetting to re-attach in recursive insert/delete.** `insert(root.left, val)` without `root.left = ...` throws the new node away. And forgetting `return root` at the end makes the parent attach `None`.
 4. **Delete case 3: deleting the successor from the wrong subtree.** After copying the successor's value into the node, delete it from `root.right`, not from `root` (that would find the node you just overwrote first).
 5. **Assuming the tree is balanced.** Saying "search is O(log n)" for a plain BST is wrong. Say "O(h): O(log n) if balanced, O(n) worst case".

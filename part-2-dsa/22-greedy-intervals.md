@@ -315,7 +315,7 @@ print(min_meeting_rooms([[0, 30], [5, 10], [15, 20]]), min_meeting_rooms([[7, 10
 2 1 3
 ```
 
-**Method B: chronological sweep** (two sorted lists). Sort all starts and all ends separately. Walk through time: each start needs a room; each end frees one. Starts and ends are compared with `<`, so a meeting ending at 5 frees its room before one starting at 5 needs it.
+**Method B: chronological sweep** (two sorted lists). Sort all starts and all ends separately. Walk through time: each start needs a room; each end frees one. An end frees its room when `end <= start` (the `ends[j] <= s` check), so a meeting ending at 5 frees its room before one starting at 5 needs it.
 
 ```python
 def min_meeting_rooms_sweep(intervals):

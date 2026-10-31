@@ -1036,7 +1036,7 @@ Notice `get` may return **several values**: if two writes conflicted, the store 
 
 #### 5.4 The building blocks
 
-A KV store answers six questions. Here's the cheat sheet; we'll go deep on each.
+A KV store answers eight questions. Here's the cheat sheet; we'll go deep on each.
 
 | Question | Technique |
 |---|---|

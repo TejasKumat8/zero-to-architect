@@ -1516,7 +1516,7 @@ print(find_in_mountain([1, 2, 3, 4, 5, 3, 1], 3), find_in_mountain([0, 1, 2, 4, 
 | Peak | indexes `[0, n-1]` | `nums[i] > nums[i+1]` | Find Peak Element |
 | On the answer | values `[lo, hi]` | `feasible(x)` | Koko, Ship, Split Array |
 | Floating point | reals `[lo, hi]` | `f(x) >= target` | Cube root |
-| Two arrays | cuts `[0, m]` | `a[i-1] > b[j]` | Median of Two Sorted Arrays |
+| Two arrays | cuts `[0, m]` | `b[j-1] <= a[i]` (with `j = half - i`) | Median of Two Sorted Arrays |
 
 > **If you remember only one thing:** binary search is "find the first YES". Name the yes/no question, check it never flips back, and the template does the rest.
 

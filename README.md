@@ -4,6 +4,10 @@
 
 > One book. Read it front to back and you go from never having written a line of code to solving interview-level algorithm problems and designing systems that serve millions of users.
 
+> 🇮🇳 **Hinglish edition available:** the same book retold in Hinglish, with desi analogies, doubt-clearing boxes, English interview lines and memory tricks added to every chapter. Start at [hinglish/README.md](hinglish/README.md).
+>
+> 📖 **Read it as a website:** [Zero to Architect reader](https://claude.ai/artifact/XkCWmqf5irVUeYNz1N6qBG) (private to you). It has an English/Hinglish switch, search, progress tracking and runnable Python examples.
+
 ---
 
 ## How this book works
@@ -27,7 +31,7 @@ Every chapter follows the same shape, so your brain always knows where it is:
 1. **Go in order.** Every chapter only uses ideas from earlier chapters.
 2. **Type the code yourself.** Don't copy-paste. Run it, then change something and predict what happens.
 3. **Do the practice before opening solutions.** Struggling for 15 minutes is where the learning happens.
-4. **Revise with the summaries.** Re-read a chapter's *Never-Forget Summary* after 1 day, 1 week and 1 month. That spacing is how things move into long-term memory.
+4. **Revise with the summaries.** Re-read a chapter's *Never-Forget Summary* after 1, 3, 7 and 21 days (the schedule in [Chapter 05 of Part 4](part-4-interview-arsenal/05-roadmap-and-revision.md)). That spacing is how things move into long-term memory.
 5. Follow the [12-week roadmap](part-4-interview-arsenal/05-roadmap-and-revision.md) if you want a schedule.
 
 ### Setup

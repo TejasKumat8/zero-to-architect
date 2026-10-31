@@ -497,7 +497,7 @@ Service that fails five times:
 
 What just happened: a brief glitch (2 failures) was invisible to the caller. A real outage (5 failures) was given up on after 4 attempts, so the caller can fail fast or degrade instead of hanging.
 
-**Two more retry protections used in production:**
+**Three more retry protections used in production:**
 - **Retry budget**: retries may add at most, say, 10% extra traffic. If more than 10% of calls are already retries, stop retrying. Google's SRE book and gRPC use this idea.
 - **Retry at one layer only.** If the gateway, orders, and inventory clients *each* retry 3 times, one user click can become 3 × 3 × 3 = 27 calls at the bottom. Pick one layer (usually closest to the failure, or at the edge) to retry.
 - Respect the server's **`Retry-After`** header on 429/503 responses.

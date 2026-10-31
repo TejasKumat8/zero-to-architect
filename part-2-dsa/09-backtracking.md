@@ -766,7 +766,7 @@ You **cannot** beat the size of the output: if the answer has 2ⁿ subsets, any 
 
 ### Why pruning matters so much
 
-Pruning removes whole **subtrees**, not single nodes. Cutting a branch at depth 2 of a permutation tree for n = 10 removes 8! = 40,320 leaves in one `continue`. N-Queens without diagonal checks would explore all 8⁸ ≈ 16.7 million placements; with them, the search touches about 2,000 nodes for n = 8. The worst-case big-O often stays the same, but the real running time drops by orders of magnitude.
+Pruning removes whole **subtrees**, not single nodes. Cutting a branch at depth 2 of a permutation tree for n = 10 removes 8! = 40,320 leaves in one `continue`. N-Queens with one queen per row but no column or diagonal checks would explore all 8⁸ ≈ 16.7 million placements; with the checks, the search touches about 2,000 nodes for n = 8. The worst-case big-O often stays the same, but the real running time drops by orders of magnitude.
 
 ---
 

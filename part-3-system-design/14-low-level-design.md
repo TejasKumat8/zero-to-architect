@@ -1570,7 +1570,7 @@ t=8  E1 opens doors at floor 0
 final: [('E0', 5, 'IDLE'), ('E1', 0, 'IDLE')]
 ```
 
-Trace the story: E1 (at 8) is closest to floor 6, E0 (at 0) is closest to 2. E0 picks up at 2, the passenger presses 5. The hall call at floor 1 arrives at t=3 while E0 is going *up*, away from it, so E0's cost gets the penalty (1 + 20). E1 has gone idle at floor 6, so its cost is just the distance, 5, and it wins. Then E1's passenger presses 0, and E1 serves 1 and 0 in one downward sweep. Neither elevator zig-zags.
+Trace the story: E1 (at 8) is closest to floor 6, E0 (at 0) is closest to 2. E0 picks up at 2, the passenger presses 5. The hall call at floor 1 arrives at t=3 while E0 is going *up*, away from it, so E0 (now at floor 3) gets the penalty: distance 2 + 20 = 22. E1 has gone idle at floor 6, so its cost is just the distance, 5, and it wins. Then E1's passenger presses 0, and E1 serves 1 and 0 in one downward sweep. Neither elevator zig-zags.
 
 **Extensions to mention:** hall buttons have a direction (a person at 5 wanting *down* shouldn't be picked up by a car going up: keep `(floor, direction)` requests); door open/close **State** machine (`MOVING`, `DOORS_OPEN`, `MAINTENANCE`); weight sensor rejecting stops when full; dispatcher strategies by time of day (morning rush: park idle cars at the lobby); the dispatcher runs in its own thread and receives requests through a thread-safe `queue.Queue`.
 

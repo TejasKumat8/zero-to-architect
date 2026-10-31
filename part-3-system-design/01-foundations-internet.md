@@ -979,7 +979,7 @@ The server's certificate contains its public key and domain name, **signed** by 
 
 ### Why DNS uses UDP (mostly)
 
-A DNS question and answer usually fit in one small packet each. A TCP handshake would triple the cost. So DNS uses UDP on port 53, and if the reply is lost the client simply asks again. Large responses (and zone transfers between servers) fall back to TCP.
+A DNS question and answer usually fit in one small packet each. A TCP handshake would add a whole extra round trip (doubling the wait) and several extra packets. So DNS uses UDP on port 53, and if the reply is lost the client simply asks again. Large responses (and zone transfers between servers) fall back to TCP.
 
 ### Where latency really comes from
 

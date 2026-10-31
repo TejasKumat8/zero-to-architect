@@ -45,7 +45,7 @@ There are seven families of operators. Learn the families and you've learned the
 | Logical | `and or not` | one of the operands / bool |
 | Identity | `is`, `is not` | `True` / `False` |
 | Membership | `in`, `not in` | `True` / `False` |
-| Bitwise | `& | ^` | bits | | bind tighter than `==` |\| ^ ~ << >>` | integers |
+| Bitwise | `& \| ^ ~ << >>` | integers |
 
 > 💡 **The core insight:** every expression boils down to one value, and Python computes it in a strictly defined order. If you can draw the tree, you can predict any output.
 

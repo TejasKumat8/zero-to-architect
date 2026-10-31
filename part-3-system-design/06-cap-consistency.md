@@ -103,7 +103,7 @@ total dispensed: 10000, real money: 5000
 
 What just happened: the CP bank was "down" for both friends but never lost money. The AP bank served both and dispensed ₹10,000 from a ₹5,000 account. Neither is "wrong": an ATM network might choose AP with a small per-withdrawal limit and fix overdrafts later (real ATMs do something like this), while a stock exchange must choose CP.
 
-(Note: in the CP version above, a smarter design lets the side with a **majority** of replicas keep serving. With 2 replicas there's no majority, so both refuse. That's why real systems use 3 or 5 replicas, section 13.)
+(Note: in the CP version above, a smarter design lets the side with a **majority** of replicas keep serving. With 2 replicas there's no majority, so both refuse. That's why real systems use 3 or 5 replicas, section 11.)
 
 ### 2. Common CAP misunderstandings
 
@@ -283,7 +283,7 @@ With multi-leader or leaderless replication, two replicas may accept **concurren
 Problems:
 
 - It **silently drops** concurrent writes. If two users add different items to a shared list at the same time, one addition vanishes.
-- Physical clocks drift (section 18). A node whose clock runs 2 seconds fast **always wins**, even against writes that actually happened later.
+- Physical clocks drift (section 16). A node whose clock runs 2 seconds fast **always wins**, even against writes that actually happened later.
 
 LWW is fine when losing a concurrent update is acceptable (a "last seen online" timestamp, cache entries) or when each key is written only once (immutable data with unique IDs).
 

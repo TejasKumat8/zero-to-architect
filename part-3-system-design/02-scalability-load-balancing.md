@@ -73,7 +73,7 @@ Add more machines of the same size and spread work across them.
 **Pros:**
 - **Practically unlimited**: add the 11th, the 101st server.
 - **Fault tolerant**: one server dies, others keep serving.
-- **Elastic**: add servers at 7 pm, remove them at 3 am (auto-scaling, section 13).
+- **Elastic**: add servers at 7 pm, remove them at 3 am (auto-scaling, section 18).
 - Commodity hardware is cheap.
 
 **Cons:**

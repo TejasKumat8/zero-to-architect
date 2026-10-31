@@ -211,7 +211,7 @@ Grinding without a method gives you a big number and a weak memory. Do this for 
 | 109 | K Closest Points to Origin | 973 | 🟡 | Max-heap of size k on squared distance (no `sqrt` needed). | O(n log k) · O(k) | [15](../part-2-dsa/15-heaps.md) |
 | 110 | ⭐ Merge k Sorted Lists | 23 | 🔴 | Min-heap of the k current heads; pop the smallest, push its next. | O(N log k) · O(k) | [15](../part-2-dsa/15-heaps.md) |
 | 111 | ⭐ Find Median from Data Stream | 295 | 🔴 | Max-heap for the low half, min-heap for the high half, sizes within 1. | O(log n) add, O(1) median · O(n) | [15](../part-2-dsa/15-heaps.md) |
-| 112 | Task Scheduler | 621 | 🟡 | Idle slots from the most frequent task: `(maxf − 1)·(n + 1) + count_of_maxf`, at least `len(tasks)`. | O(N) · O(26) | [15](../part-2-dsa/15-heaps.md) |
+| 112 | Task Scheduler | 621 | 🟡 | Total slots (idle included) from the most frequent task: `(maxf − 1)·(n + 1) + count_of_maxf`, at least `len(tasks)`. | O(N) · O(26) | [15](../part-2-dsa/15-heaps.md) |
 | 113 | Reorganize String | 767 | 🟡 | Max-heap: always place the most frequent char that differs from the previous one. | O(n log 26) · O(26) | [15](../part-2-dsa/15-heaps.md) |
 
 ### 16 · Graphs I: BFS, DFS & Grids · [Chapter](../part-2-dsa/16-graphs-bfs-dfs.md)
@@ -300,7 +300,7 @@ Grinding without a method gives you a big number and a weak memory. Do this for 
 |---|---|---|---|---|---|---|
 | 164 | ⭐ Merge Intervals | 56 | 🟡 | Sort by start; extend the last interval while they overlap. | O(n log n) · O(n) | [22](../part-2-dsa/22-greedy-intervals.md) |
 | 165 | ⭐ Insert Interval | 57 | 🟡 | Copy the ones ending before; merge the overlapping ones; copy the rest. | O(n) · O(n) | [22](../part-2-dsa/22-greedy-intervals.md) |
-| 166 | ⭐ Non-overlapping Intervals | 435 | 🟡 | Sort by end; keep every interval that starts after the last kept end. | O(n log n) · O(1) | [22](../part-2-dsa/22-greedy-intervals.md) |
+| 166 | ⭐ Non-overlapping Intervals | 435 | 🟡 | Sort by end; keep every interval that starts at or after the last kept end. | O(n log n) · O(1) | [22](../part-2-dsa/22-greedy-intervals.md) |
 | 167 | Meeting Rooms 🔒 | 252 | 🟢 | Sort by start; any overlap between neighbours → False. | O(n log n) · O(1) | [22](../part-2-dsa/22-greedy-intervals.md) |
 | 168 | Meeting Rooms II 🔒 | 253 | 🟡 | Min-heap of end times; reuse a room when the earliest end ≤ start. | O(n log n) · O(n) | [22](../part-2-dsa/22-greedy-intervals.md) |
 | 169 | Minimum Number of Arrows to Burst Balloons | 452 | 🟡 | Sort by end; shoot at an end, new arrow only when a balloon starts after it. | O(n log n) · O(1) | [22](../part-2-dsa/22-greedy-intervals.md) |

@@ -534,7 +534,7 @@ What just happened: two very different sentences ("Designing systems for million
 
 ### 12. Phrase queries need positions
 
-`"new york"` in quotes means *these words next to each other in this order*. A plain posting list can't answer that: a document can contain "new" and "york" far apart. So engines store **positions** too: `york → {doc 1: [1], doc 2: [0, 13]}`.
+`"new york"` in quotes means *these words next to each other in this order*. A plain posting list can't answer that: a document can contain "new" and "york" far apart. So engines store **positions** too: `york → {doc 1: [1], doc 2: [0, 12]}`.
 
 ```python
 from collections import defaultdict
